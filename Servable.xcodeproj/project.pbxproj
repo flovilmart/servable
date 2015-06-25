@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AC772C81B3C6E1B00A95623 /* Servable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC772C71B3C6E1B00A95623 /* Servable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AC772CF1B3C6E1C00A95623 /* Servable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC772C41B3C6E1B00A95623 /* Servable.framework */; };
+		4AC772D41B3C6E1C00A95623 /* ServableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772D31B3C6E1C00A95623 /* ServableTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AC772D01B3C6E1C00A95623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AC772BB1B3C6E1B00A95623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AC772C31B3C6E1B00A95623;
+			remoteInfo = Servable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4AC772C41B3C6E1B00A95623 /* Servable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Servable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC772C71B3C6E1B00A95623 /* Servable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Servable.h; sourceTree = "<group>"; };
+		4AC772C91B3C6E1B00A95623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC772CE1B3C6E1C00A95623 /* ServableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC772D31B3C6E1C00A95623 /* ServableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServableTests.swift; sourceTree = "<group>"; };
+		4AC772D51B3C6E1C00A95623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AC772C01B3C6E1B00A95623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC772CB1B3C6E1C00A95623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC772CF1B3C6E1C00A95623 /* Servable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AC772BA1B3C6E1B00A95623 = {
+			isa = PBXGroup;
+			children = (
+				4AC772C61B3C6E1B00A95623 /* Servable */,
+				4AC772D21B3C6E1C00A95623 /* ServableTests */,
+				4AC772C51B3C6E1B00A95623 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AC772C51B3C6E1B00A95623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AC772C41B3C6E1B00A95623 /* Servable.framework */,
+				4AC772CE1B3C6E1C00A95623 /* ServableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AC772C61B3C6E1B00A95623 /* Servable */ = {
+			isa = PBXGroup;
+			children = (
+				4AC772C71B3C6E1B00A95623 /* Servable.h */,
+				4AC772C91B3C6E1B00A95623 /* Info.plist */,
+			);
+			path = Servable;
+			sourceTree = "<group>";
+		};
+		4AC772D21B3C6E1C00A95623 /* ServableTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AC772D31B3C6E1C00A95623 /* ServableTests.swift */,
+				4AC772D51B3C6E1C00A95623 /* Info.plist */,
+			);
+			path = ServableTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AC772C11B3C6E1B00A95623 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC772C81B3C6E1B00A95623 /* Servable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4AC772C31B3C6E1B00A95623 /* Servable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC772D81B3C6E1C00A95623 /* Build configuration list for PBXNativeTarget "Servable" */;
+			buildPhases = (
+				4AC772BF1B3C6E1B00A95623 /* Sources */,
+				4AC772C01B3C6E1B00A95623 /* Frameworks */,
+				4AC772C11B3C6E1B00A95623 /* Headers */,
+				4AC772C21B3C6E1B00A95623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Servable;
+			productName = Servable;
+			productReference = 4AC772C41B3C6E1B00A95623 /* Servable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4AC772CD1B3C6E1C00A95623 /* ServableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC772DB1B3C6E1C00A95623 /* Build configuration list for PBXNativeTarget "ServableTests" */;
+			buildPhases = (
+				4AC772CA1B3C6E1C00A95623 /* Sources */,
+				4AC772CB1B3C6E1C00A95623 /* Frameworks */,
+				4AC772CC1B3C6E1C00A95623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AC772D11B3C6E1C00A95623 /* PBXTargetDependency */,
+			);
+			name = ServableTests;
+			productName = ServableTests;
+			productReference = 4AC772CE1B3C6E1C00A95623 /* ServableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AC772BB1B3C6E1B00A95623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = flovilmart;
+				TargetAttributes = {
+					4AC772C31B3C6E1B00A95623 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					4AC772CD1B3C6E1C00A95623 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 4AC772BE1B3C6E1B00A95623 /* Build configuration list for PBXProject "Servable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4AC772BA1B3C6E1B00A95623;
+			productRefGroup = 4AC772C51B3C6E1B00A95623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AC772C31B3C6E1B00A95623 /* Servable */,
+				4AC772CD1B3C6E1C00A95623 /* ServableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AC772C21B3C6E1B00A95623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC772CC1B3C6E1C00A95623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AC772BF1B3C6E1B00A95623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC772CA1B3C6E1C00A95623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC772D41B3C6E1C00A95623 /* ServableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AC772D11B3C6E1C00A95623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AC772C31B3C6E1B00A95623 /* Servable */;
+			targetProxy = 4AC772D01B3C6E1C00A95623 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4AC772D61B3C6E1C00A95623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AC772D71B3C6E1C00A95623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AC772D91B3C6E1C00A95623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Servable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flovilmart.Servable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4AC772DA1B3C6E1C00A95623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Servable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flovilmart.Servable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4AC772DC1B3C6E1C00A95623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ServableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flovilmart.ServableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4AC772DD1B3C6E1C00A95623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ServableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flovilmart.ServableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AC772BE1B3C6E1B00A95623 /* Build configuration list for PBXProject "Servable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC772D61B3C6E1C00A95623 /* Debug */,
+				4AC772D71B3C6E1C00A95623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AC772D81B3C6E1C00A95623 /* Build configuration list for PBXNativeTarget "Servable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC772D91B3C6E1C00A95623 /* Debug */,
+				4AC772DA1B3C6E1C00A95623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4AC772DB1B3C6E1C00A95623 /* Build configuration list for PBXNativeTarget "ServableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC772DC1B3C6E1C00A95623 /* Debug */,
+				4AC772DD1B3C6E1C00A95623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AC772BB1B3C6E1B00A95623 /* Project object */;
+}
