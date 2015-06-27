@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1AF9401B3CF20500FF3744 /* Path2RegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1AF93F1B3CF20500FF3744 /* Path2RegTests.swift */; };
+		4A690FC91B3F2C1C0000B350 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A690FC81B3F2C1C0000B350 /* Route.swift */; };
+		4A690FCE1B3F2F340000B350 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A690FCD1B3F2F340000B350 /* MockServer.swift */; };
+		4A690FD01B3F2F4A0000B350 /* MockConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A690FCF1B3F2F4A0000B350 /* MockConnection.swift */; };
+		4A690FD31B3F2F7A0000B350 /* Servables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A690FD21B3F2F7A0000B350 /* Servables.swift */; };
+		4A690FD51B3F2FA90000B350 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A690FD41B3F2FA90000B350 /* MockRouter.swift */; };
+		4A6CD37C1B3CEDE2002C6462 /* Path2Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CD37B1B3CEDE2002C6462 /* Path2Regexp.swift */; };
 		4AC772C81B3C6E1B00A95623 /* Servable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC772C71B3C6E1B00A95623 /* Servable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC772CF1B3C6E1C00A95623 /* Servable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC772C41B3C6E1B00A95623 /* Servable.framework */; };
 		4AC772D41B3C6E1C00A95623 /* ServableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772D31B3C6E1C00A95623 /* ServableTests.swift */; };
+		4AC772DF1B3C6E2A00A95623 /* Servable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772DE1B3C6E2A00A95623 /* Servable.swift */; };
+		4AC772E11B3C6E4A00A95623 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772E01B3C6E4A00A95623 /* Request.swift */; };
+		4AC772E31B3C6E5C00A95623 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772E21B3C6E5C00A95623 /* Response.swift */; };
+		4AC772E51B3C6E6C00A95623 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772E41B3C6E6C00A95623 /* Server.swift */; };
+		4AC772E71B3C704B00A95623 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC772E61B3C704B00A95623 /* Connection.swift */; };
+		4AD1B1CD1B3C89FA00C1D7EF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1B1CC1B3C89FA00C1D7EF /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +36,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A1AF93F1B3CF20500FF3744 /* Path2RegTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path2RegTests.swift; sourceTree = "<group>"; };
+		4A690FC81B3F2C1C0000B350 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4A690FCD1B3F2F340000B350 /* MockServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
+		4A690FCF1B3F2F4A0000B350 /* MockConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockConnection.swift; sourceTree = "<group>"; };
+		4A690FD21B3F2F7A0000B350 /* Servables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servables.swift; sourceTree = "<group>"; };
+		4A690FD41B3F2FA90000B350 /* MockRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		4A6CD37B1B3CEDE2002C6462 /* Path2Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path2Regexp.swift; sourceTree = "<group>"; };
 		4AC772C41B3C6E1B00A95623 /* Servable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Servable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC772C71B3C6E1B00A95623 /* Servable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Servable.h; sourceTree = "<group>"; };
 		4AC772C91B3C6E1B00A95623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC772CE1B3C6E1C00A95623 /* ServableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC772D31B3C6E1C00A95623 /* ServableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServableTests.swift; sourceTree = "<group>"; };
 		4AC772D51B3C6E1C00A95623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC772DE1B3C6E2A00A95623 /* Servable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servable.swift; sourceTree = "<group>"; };
+		4AC772E01B3C6E4A00A95623 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4AC772E21B3C6E5C00A95623 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4AC772E41B3C6E6C00A95623 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		4AC772E61B3C704B00A95623 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		4AD1B1CC1B3C89FA00C1D7EF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +76,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A690FCA1B3F2C240000B350 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1B1CC1B3C89FA00C1D7EF /* Router.swift */,
+				4A690FC81B3F2C1C0000B350 /* Route.swift */,
+			);
+			name = router;
+			sourceTree = "<group>";
+		};
+		4A690FCB1B3F2CB70000B350 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CD37B1B3CEDE2002C6462 /* Path2Regexp.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		4A690FD11B3F2F5F0000B350 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4A690FCD1B3F2F340000B350 /* MockServer.swift */,
+				4A690FD41B3F2FA90000B350 /* MockRouter.swift */,
+				4A690FCF1B3F2F4A0000B350 /* MockConnection.swift */,
+				4A690FD21B3F2F7A0000B350 /* Servables.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		4AC772BA1B3C6E1B00A95623 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				4AC772C71B3C6E1B00A95623 /* Servable.h */,
+				4AC772DE1B3C6E2A00A95623 /* Servable.swift */,
+				4AC772E41B3C6E6C00A95623 /* Server.swift */,
+				4AC772E01B3C6E4A00A95623 /* Request.swift */,
+				4AC772E21B3C6E5C00A95623 /* Response.swift */,
+				4AC772E61B3C704B00A95623 /* Connection.swift */,
+				4A690FCA1B3F2C240000B350 /* router */,
+				4A690FCB1B3F2CB70000B350 /* utils */,
 				4AC772C91B3C6E1B00A95623 /* Info.plist */,
 			);
 			path = Servable;
@@ -81,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				4AC772D31B3C6E1C00A95623 /* ServableTests.swift */,
+				4A690FD11B3F2F5F0000B350 /* Mocks */,
+				4A1AF93F1B3CF20500FF3744 /* Path2RegTests.swift */,
 				4AC772D51B3C6E1C00A95623 /* Info.plist */,
 			);
 			path = ServableTests;
@@ -142,6 +205,7 @@
 		4AC772BB1B3C6E1B00A95623 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = flovilmart;
 				TargetAttributes = {
@@ -193,6 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC772DF1B3C6E2A00A95623 /* Servable.swift in Sources */,
+				4AC772E31B3C6E5C00A95623 /* Response.swift in Sources */,
+				4AC772E71B3C704B00A95623 /* Connection.swift in Sources */,
+				4AC772E51B3C6E6C00A95623 /* Server.swift in Sources */,
+				4A6CD37C1B3CEDE2002C6462 /* Path2Regexp.swift in Sources */,
+				4A690FC91B3F2C1C0000B350 /* Route.swift in Sources */,
+				4AD1B1CD1B3C89FA00C1D7EF /* Router.swift in Sources */,
+				4AC772E11B3C6E4A00A95623 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A690FD51B3F2FA90000B350 /* MockRouter.swift in Sources */,
+				4A690FCE1B3F2F340000B350 /* MockServer.swift in Sources */,
+				4A690FD01B3F2F4A0000B350 /* MockConnection.swift in Sources */,
+				4A1AF9401B3CF20500FF3744 /* Path2RegTests.swift in Sources */,
 				4AC772D41B3C6E1C00A95623 /* ServableTests.swift in Sources */,
+				4A690FD31B3F2F7A0000B350 /* Servables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +379,7 @@
 		4AC772D91B3C6E1C00A95623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,12 +392,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flovilmart.Servable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4AC772DA1B3C6E1C00A95623 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -376,6 +456,7 @@
 				4AC772DA1B3C6E1C00A95623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AC772DB1B3C6E1C00A95623 /* Build configuration list for PBXNativeTarget "ServableTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +465,7 @@
 				4AC772DD1B3C6E1C00A95623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
