@@ -10,5 +10,5 @@ import Foundation
 import Servable
 
 class MockRouter:Router {
-    var stack = Servables()
+    var servables = [Servable]()
 }

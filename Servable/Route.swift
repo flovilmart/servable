@@ -65,7 +65,7 @@ public struct Route:Servable {
             
             print("Matches \(method.rawValue) \(path)")
             print("Loaded Params \(request.params)")
-            request.connection.request = request
+            //request.connection.request = request
             self.servable.handle(request, response: response, next: next)
         }else{
             print("Skipping \(method.rawValue) \(path)")

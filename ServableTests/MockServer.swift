@@ -11,7 +11,7 @@ import Servable
 
 class MockServer:Server {
     
-    var stack = Servables()
+    var servables = [Servable]()
     
     func listen(port: Int) {
         print("Listening on \(port)")

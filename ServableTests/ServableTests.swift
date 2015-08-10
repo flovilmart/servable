@@ -31,7 +31,7 @@ class ServableTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let expectation = expectationWithDescription("wait")
-        var connection = MockConnection(string: "Hello Worlds")
+        let connection = MockConnection(string: "Hello Worlds")
         mockServer?.use(PassThrough())
         mockServer?.use(LongProcess())
         mockServer?.use(PassThrough())

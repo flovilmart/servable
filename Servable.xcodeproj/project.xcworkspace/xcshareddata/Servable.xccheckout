@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6C06C7C8-A38C-4F90-AE78-4FAAC2B2E722</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>50D591FCA46BF831D6A262167115460EDF3BF738</key>
+		<string>github.com:flovilmart/servable.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Servable.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>50D591FCA46BF831D6A262167115460EDF3BF738</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:flovilmart/servable.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>50D591FCA46BF831D6A262167115460EDF3BF738</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>50D591FCA46BF831D6A262167115460EDF3BF738</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Servable</string>
+		</dict>
+	</array>
+</dict>
+</plist>

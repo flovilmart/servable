@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Server:ServableStack {
+public protocol Server:ServablesType {
     func listen(port:Int)
     func handleConnection(connection:Connection, next:dispatch_block_t)
 }

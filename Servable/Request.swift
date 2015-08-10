@@ -6,7 +6,7 @@
 //  Copyright © 2015 flovilmart. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 
 public enum Method:String {
     case GET = "GET"

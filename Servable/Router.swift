@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol Router:ServableStack { }
+public protocol Router:ServablesType { }
 
 public extension Router {
     
     mutating func add(method:Method, path:String, servable:Servable) {
-        stack.append(Route(method: method, path: path, servable:servable))
+        self.use(Route(method: method, path: path, servable:servable))
     }
     
     mutating func all(path:String, servable:Servable) {
