@@ -33,7 +33,7 @@ class ServableTests: XCTestCase {
         let expectation = expectationWithDescription("wait")
         let connection = MockConnection(string: "Hello Worlds")
         mockServer?.use(PassThrough())
-        mockServer?.use(LongProcess())
+        mockServer?.use(LongProcess.handle)
         mockServer?.use(PassThrough())
         mockServer?.handleConnection(connection) {
             expectation.fulfill()
@@ -46,9 +46,9 @@ class ServableTests: XCTestCase {
     
     func testGETRouter() {
         var router = MockRouter()
-        router.get("/hello", servable: RequestPrinter())
-        router.post("/hello", servable: RequestPrinter())
-        mockServer?.use(router)
+        router.get("/hello", RequestPrinter)
+        router.post("/hello", RequestPrinter)
+        mockServer?.use(router.handle)
         
         let expectation = expectationWithDescription("wait")
         let connection = GETConnection(string: "Hello Worlds", path:"/hello")
@@ -68,10 +68,10 @@ class ServableTests: XCTestCase {
     
     func testPOSTRouter() {
         var router = MockRouter()
-        router.get("hello", servable: RequestPrinter())
-        router.post("/hello2", servable: RequestPrinter())
-        router.post("/:a/:b/:c/:d", servable: RequestPrinter())
-        mockServer?.use(router)
+        router.get("hello", RequestPrinter)
+        router.post("/hello2", RequestPrinter)
+        router.post("/:a/:b/:c/:d", RequestPrinter)
+        mockServer?.use(router.handle)
         
         let expectation = expectationWithDescription("wait")
         let connection = POSTConnection(string: "Hello Worlds", path:"/hello/world/I/love")
@@ -93,8 +93,8 @@ class ServableTests: XCTestCase {
     
     func testRouterWithParameters() {
         var router = MockRouter()
-        router.post("/:a/:b/:c/:d", servable: RequestPrinter())
-        mockServer?.use(router)
+        router.post("/:a/:b/:c/:d", RequestPrinter)
+        mockServer?.use(router.handle)
         
         let expectation = expectationWithDescription("wait")
         let connection = POSTConnection(string: "Hello Worlds", path:"/hello/world/I/love")
@@ -127,12 +127,12 @@ class ServableTests: XCTestCase {
         
         
         
-        nestedRouter2.get("/love", servable: RequestPrinter())
-        nestedRouter.get("/:world", servable: nestedRouter2)
-        nestedRouter.get("/a", servable:nestedRouter2)
-        mockRouter.get("/hello", servable: nestedRouter)
+        nestedRouter2.get("/love", RequestPrinter)
+        nestedRouter.get("/:world", nestedRouter2.handle)
+        nestedRouter.get("/a", nestedRouter2.handle)
+        mockRouter.get("/hello", nestedRouter.handle)
         
-        mockServer?.use(mockRouter)
+        mockServer?.use(mockRouter.handle)
         
         let expectation = expectationWithDescription("wait")
         let connection = GETConnection(string: "Hello Worlds", path:"/hello/a/love")
@@ -152,8 +152,8 @@ class ServableTests: XCTestCase {
     
     func testANYRouter() {
         var router = MockRouter()
-        router.all("/hello", servable: RequestPrinter())
-        mockServer?.use(router)
+        router.all("/hello", RequestPrinter)
+        mockServer?.use(router.handle)
         
         let expectation = expectationWithDescription("wait")
         let connection = POSTConnection(string: "Hello Worlds", path:"/hello")
@@ -172,14 +172,14 @@ class ServableTests: XCTestCase {
     
     func testComplexNesting() {
         var otherRouter = MockRouter()
-        otherRouter.get("/world", servable: RequestPrinter())
+        otherRouter.get("/world", RequestPrinter)
         
         
         var otherServer = MockServer()
-        otherServer.use(otherRouter)
+        otherServer.use(otherRouter.handle)
         
         var router = MockRouter()
-        router.all("/hello", servable: otherServer)
+        router.all("/hello", otherServer.handle)
     
         mockServer?.use(router)
         let expectation = expectationWithDescription("wait")

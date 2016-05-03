@@ -6,6 +6,8 @@
 //  Copyright © 2015 flovilmart. All rights reserved.
 //
 
+public typealias ServableHandler = (request: Request, response: Response, next: dispatch_block_t) -> Void
+
 public protocol Servable:Any {
     func handle(request: Request, response: Response, next: dispatch_block_t)
 }

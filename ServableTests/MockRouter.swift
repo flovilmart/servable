@@ -9,6 +9,6 @@
 import Foundation
 import Servable
 
-class MockRouter:Router {
-    var servables = [Servable]()
+class MockRouter: Router {
+    var handlers: [ServableHandler] = []
 }

@@ -9,22 +9,15 @@
 import Foundation
 import Servable
 
-class PassThrough:Servable {
-    func handle(request: Request, response: Response, next: dispatch_block_t) {
+func PassThrough() -> ServableHandler {
+    return {
         print("Do Nothing")
-        next()
+        $2()
     }
 }
 
-class SayHello:Servable {
-    func handle(request: Request,response: Response, next: dispatch_block_t) {
-        response.send("Hello!")
-        next()
-    }
-}
-
-class LongProcess:Servable {
-    func handle(request: Request,response: Response, next: dispatch_block_t) {
+struct LongProcess {
+    static func handle(request: Request,response: Response, next: dispatch_block_t) {
         print("Wait...")
         let time:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(3)*Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
@@ -52,12 +45,10 @@ class Appender:Servable {
     }
 }
 
-class RequestPrinter:Servable {
-    func handle(request: Request,response: Response, next: dispatch_block_t) {
-        response.write("\(request.method.rawValue) \(request.path) \(request.body!)")
-        response.success()
-        next()
-    }
+let RequestPrinter: ServableHandler = {
+    $1.write("\($0.method.rawValue) \($0.path) \($0.body!)")
+    $1.success()
+    $2()
 }
 
 class RequestParamsPrinter:Servable  {
