@@ -8,16 +8,15 @@
 
 import Foundation
 
-public protocol Server:ServablesType {
+public protocol Server:Servables {
     func listen(port:Int)
-    func handleConnection(connection:Connection, next:dispatch_block_t)
+    func handleConnection(connection:Connection, next: dispatch_block_t)
 }
 
 
 public extension Server {
-    
-    func handleConnection(connection:Connection, next:dispatch_block_t = {()in}) {
-        self.handle(connection.request, response:connection.response, next:  next)
+    func handleConnection(connection:Connection, next: dispatch_block_t) {
+        return handle(connection.request, response:connection.response, next: next)
     }
 }
 

@@ -35,11 +35,10 @@ class ServableTests: XCTestCase {
         mockServer?.use(PassThrough())
         mockServer?.use(LongProcess())
         mockServer?.use(PassThrough())
-        mockServer?.handleConnection(connection, next:{() -> Void in
+        mockServer?.handleConnection(connection) {
             expectation.fulfill()
             print("DONE!")
-        })
-        
+        }
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
         }
@@ -60,9 +59,7 @@ class ServableTests: XCTestCase {
             
         }
         
-        mockServer?.handleConnection(connection, next:{() -> Void in
-            print("DONE!")
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
@@ -87,8 +84,7 @@ class ServableTests: XCTestCase {
             expectation.fulfill()
         
         }
-        mockServer?.handleConnection(connection, next:{() -> Void in
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
@@ -117,8 +113,7 @@ class ServableTests: XCTestCase {
             expectation.fulfill()
             
         }
-        mockServer?.handleConnection(connection, next:{() -> Void in
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
@@ -147,8 +142,7 @@ class ServableTests: XCTestCase {
             expectation.fulfill()
             
         }
-        mockServer?.handleConnection(connection, next:{() -> Void in
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
@@ -169,9 +163,7 @@ class ServableTests: XCTestCase {
             expectation.fulfill()
             
         }
-        mockServer?.handleConnection(connection, next:{() -> Void in
-        
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")
@@ -198,9 +190,7 @@ class ServableTests: XCTestCase {
             expectation.fulfill()
             
         }
-        mockServer?.handleConnection(connection, next:{() -> Void in
-            
-        })
+        mockServer?.handleConnection(connection) {}
         
         waitForExpectationsWithTimeout(20.0) { (error) -> Void in
             print("DONE!")

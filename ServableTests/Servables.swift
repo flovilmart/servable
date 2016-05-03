@@ -10,7 +10,7 @@ import Foundation
 import Servable
 
 class PassThrough:Servable {
-    func handle(request: Request,response: Response, next: dispatch_block_t) {
+    func handle(request: Request, response: Response, next: dispatch_block_t) {
         print("Do Nothing")
         next()
     }
@@ -19,7 +19,6 @@ class PassThrough:Servable {
 class SayHello:Servable {
     func handle(request: Request,response: Response, next: dispatch_block_t) {
         response.send("Hello!")
-        //print("Do Nothing")
         next()
     }
 }
@@ -48,7 +47,6 @@ class OtherLongProcess:Servable {
 
 class Appender:Servable {
     func handle(request: Request,response: Response, next: dispatch_block_t) {
-        print("Appender!")
         response.write(request.body!)
         next()
     }
@@ -56,7 +54,7 @@ class Appender:Servable {
 
 class RequestPrinter:Servable {
     func handle(request: Request,response: Response, next: dispatch_block_t) {
-        response.write("\(request.method!.rawValue) \(request.path!) \(request.body!)")
+        response.write("\(request.method.rawValue) \(request.path) \(request.body!)")
         response.success()
         next()
     }
@@ -70,7 +68,7 @@ class RequestParamsPrinter:Servable  {
         }
         
         let string = (str as NSArray).componentsJoinedByString(" ")
-        response.send("\(request.method!.rawValue) \(string) \(request.body!)")
+        response.send("\(request.method.rawValue) \(string) \(request.body!)")
         next()
     }
 }

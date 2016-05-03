@@ -14,21 +14,43 @@ public enum Method:String {
     case PUT = "PUT"
     case DELETE = "DELETE"
     case HEAD = "HEAD"
+    case OPTION = "OPTION"
     case ANY = "ANY"
 }
 
-public class Request {
+public protocol Request {
+    var connection: Connection { get set }
+    var params: [String: String] { get set }
+    var method: Method { get set }
+    var path: String { get set }
+    var currentPath: String { get set }
+    var data: NSData? { get set }
+    var body:String? { get set }
+}
+
+public class HTTPRequest: Request {
     
     public var connection:Connection
     public var params:[String:String] = [String:String]()
-    public var method:Method?
+    public var method:Method = .GET
     
-    public var path:String? {
+    public var path:String {
         didSet {
             self.currentPath = path
         }
     }
-    public var currentPath:String?
+    private var _currentPath: String?
+    public var currentPath:String {
+        get {
+            guard let _currentPath = _currentPath else {
+                return path
+            }
+            return _currentPath
+        }
+        set {
+            _currentPath = newValue
+        }
+    }
     public var body:String?
     public var data:NSData?
     

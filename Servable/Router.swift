@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol Router:ServablesType { }
+public protocol Router:Servables {}
 
 public extension Router {
     
     mutating func add(method:Method, path:String, servable:Servable) {
-        self.use(Route(method: method, path: path, servable:servable))
+        self.use(_Route(method: method, path: path, servable:servable))
     }
     
     mutating func all(path:String, servable:Servable) {
@@ -32,4 +32,11 @@ public extension Router {
     mutating func delete(path:String, servable:Servable){
         add(.DELETE, path: path, servable: servable)
     }
+}
+
+// Thin struct for routes
+private struct _Route: Route {
+    var method: Method
+    var path: String
+    var servable: Servable
 }

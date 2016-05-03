@@ -117,11 +117,10 @@ extension String {
         if end < 0 {
             end = self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)+end
         }
+        let startIndex = self.startIndex.advancedBy(aStart)
+        let endIndex = self.startIndex.advancedBy(end)
         
-        let startIndex = advance(self.startIndex, aStart)
-        let endIndex = advance(self.startIndex, end)
-        
-        return self.substringWithRange(Range(start: startIndex, end: endIndex))
+        return self.substringWithRange(startIndex..<endIndex)
     }
 }
 
@@ -181,7 +180,7 @@ public struct Path2RegExp {
         var tokens = [TokenResult]()
         let matches = Path2RegExp.PATH_REGEXP.matchesInString(str, options: [], range: NSMakeRange(0, str.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)))
             
-        matches.flatMap({ (result) -> [String?] in
+        matches.forEach({ (result) -> Void in
             var res = [String?]()
             for i in 0..<result.numberOfRanges {
                 let range = result.rangeAtIndex(i)
@@ -200,8 +199,8 @@ public struct Path2RegExp {
             index = result.range.location + m.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
             
             if let escaped = res[1] {
-                path+=String(escaped[advance(escaped.startIndex, 1)])
-                return []
+                path+=String(escaped[escaped.startIndex.advancedBy(1)])
+                return
             }
             
             if path.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
@@ -210,7 +209,7 @@ public struct Path2RegExp {
             }
             
             
-            let name = res[3] ?? "\(key++)"
+            let name = res[3] ?? "\(key += 1)"
             let capture = res[4]
             let group = res[5]
             let asterisk = res[7]
@@ -239,11 +238,11 @@ public struct Path2RegExp {
             let tokenResult = TokenResult(token:Token(name: name, prefix: prefix, delimiter: delimiter, optional: optional, repeats: isRepeating, pattern: pattern))
             
             tokens.append(tokenResult)
-            return res
+            return
         })
         
         if (index < str.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)) {
-            path += str.substringFromIndex(advance(str.startIndex, index))
+            path += str.substringFromIndex(str.startIndex.advancedBy(index))
         }
         
         if path.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0  {
@@ -317,7 +316,7 @@ public struct Path2RegExp {
                             throw TypeError.NotMatchingError(key.name, pattern: key.pattern)
                         }
                         path += (j == 0 ? key.prefix : key.delimiter) + encodeURIComponent(val)
-                        j++
+                        j += 1
                     }
                 }
                 
@@ -330,7 +329,7 @@ public struct Path2RegExp {
                 
                 path += key.prefix + encodeURIComponent(stringValue)
                 
-                i++
+                i+=1
                 
             }
         
@@ -409,8 +408,8 @@ public struct Path2RegExp {
         return RegularExpressionKeyed(re: regularExpression, keys: keys)
     }
     
-    public static func stringToRegexp(path:String,inout keys:[Token], options:[String:AnyObject]) throws -> RegularExpressionKeyed {
-        
+    public static func stringToRegexp(path:String, options:[String:AnyObject] = [:]) throws -> RegularExpressionKeyed {
+        var keys = [Token]()
         let tokens = parse(path)
         let re = try tokensToRegexp(tokens, options: options)
         for token in tokens {
@@ -421,9 +420,8 @@ public struct Path2RegExp {
         return attachKeys(re, keys: keys)
     }
     
-    public static func pathToRegexp (path:String, inout keys:[Token]?, options:[String:AnyObject]) throws -> RegularExpressionKeyed {
-        keys = keys ?? [Token]()
-        return try stringToRegexp(path, keys: &keys!, options: options)
+    public static func pathToRegexp (path:String, options:[String:AnyObject]) throws -> RegularExpressionKeyed {
+        return try stringToRegexp(path, options: options)
         
     }
 }

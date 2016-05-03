@@ -13,7 +13,7 @@ import Servable
 class MockConnection:Connection {
     
     var ready:dispatch_block_t?
-    lazy var request:Request =  Request(connection: self, path:self.path)
+    lazy var request:Request =  HTTPRequest(connection: self, path:self.path)
     lazy var response:Response = HTTPResponse(connection: self)
     
     var contents:String
@@ -42,7 +42,7 @@ class MockConnection:Connection {
     }
     
     var expected:String {
-        return "\(self.request.method!.rawValue) \(self.request.path!) \(self.contents)"
+        return "\(self.request.method.rawValue) \(self.request.path) \(self.contents)"
     }
 }
 
